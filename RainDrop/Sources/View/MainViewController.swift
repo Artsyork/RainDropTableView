@@ -107,6 +107,8 @@ final class MainViewController: UIViewController {
             self?.rainDropItems[at].frame.origin.x += 30
         }, completion : { _ in
             self.rainDropItems[at].isHidden = true
+            let a = self.tableView.cellForRow(at: IndexPath(row: at, section: 0)) as! RainDropTableViewCell
+            a.completeImageView.isHidden = false
         })
     }
 }
